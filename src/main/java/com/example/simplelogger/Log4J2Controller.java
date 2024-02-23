@@ -13,10 +13,13 @@ public class Log4J2Controller {
     @GetMapping(value = "/greeting")
     public String greeting() {
         System.out.println("IN GREETING");
+        LOG.info("I have added more logs to our greeting method");
         LOG.debug("Debugging log in our greeting method");
         LOG.info("Info log in our greeting method");
         LOG.warn("Warning log in our greeting method");
-        //LOG.error("Error in our greeting method");
+        LOG.error("Error in our greeting method");
+        LOG.fatal("Fatal error in our greeting method");
+
         return "Hello!!!";
     }
 }
